@@ -39,3 +39,7 @@ dart run flutter_launcher_icons
 ```
 
 Esto actualiza los iconos en `android/` e `ios/`. Si publicas en App Store y el icono lleva canal alpha, revisa la opción `remove_alpha_ios` en la documentación del paquete.
+
+## Google Play
+
+Plantillas y referencias para ficha de tienda, política de privacidad, notas de versión y versionado: [assets/play_store/README.md](assets/play_store/README.md).
