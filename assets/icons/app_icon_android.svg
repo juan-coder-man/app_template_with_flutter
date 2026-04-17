@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="1024"
+   height="1024"
+   viewBox="0 0 1023.9998 1024"
+   sodipodi:docname="app_icon_android.svg"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   inkscape:export-filename="app_icon_android.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.6301176"
+     inkscape:cx="492.76516"
+     inkscape:cy="451.50302"
+     inkscape:window-width="1920"
+     inkscape:window-height="1022"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g1" /><defs
+     id="defs1" /><g
+     id="g1"
+     transform="matrix(8.6281239,0,0,8.6281239,-4111.5967,-3974.1291)"><rect
+       style="display:inline;fill:#ffffff;fill-opacity:0.5;stroke-width:0.126675"
+       id="rect1"
+       width="114.17863"
+       height="114.17863"
+       x="478.78577"
+       y="462.85327"
+       inkscape:label="safearea" /><circle
+       style="fill:#000000;fill-opacity:1;stroke-width:0.112149"
+       id="path1"
+       cx="535.87512"
+       cy="519.94257"
+       r="56.895679"
+       inkscape:label="example" /></g></svg>
