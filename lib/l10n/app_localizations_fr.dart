@@ -10,4 +10,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get appMessage => 'Bienvenue';
+
+  @override
+  String get languageNameInSpanish => 'Francés';
 }

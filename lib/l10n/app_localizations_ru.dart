@@ -10,4 +10,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get appMessage => 'Добро пожаловать';
+
+  @override
+  String get languageNameInSpanish => 'Ruso';
 }

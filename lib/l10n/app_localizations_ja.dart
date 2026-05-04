@@ -10,4 +10,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get appMessage => 'ようこそ';
+
+  @override
+  String get languageNameInSpanish => 'Japonés';
 }

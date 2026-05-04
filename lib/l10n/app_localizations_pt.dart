@@ -10,4 +10,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get appMessage => 'Bem-vindo';
+
+  @override
+  String get languageNameInSpanish => 'Portugués';
 }

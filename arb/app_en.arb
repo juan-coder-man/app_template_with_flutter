@@ -1,6 +1,4 @@
 {
   "appMessage": "Welcome",
-  "@appMessage": {
-    "description": "Main message shown on the home screen."
-  }
+  "languageNameInSpanish": "Inglés"
 }

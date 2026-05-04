@@ -10,4 +10,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get appMessage => '欢迎';
+
+  @override
+  String get languageNameInSpanish => 'Chino';
 }

@@ -10,4 +10,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get appMessage => '환영합니다';
+
+  @override
+  String get languageNameInSpanish => 'Coreano';
 }

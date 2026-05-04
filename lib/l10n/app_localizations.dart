@@ -112,11 +112,17 @@ abstract class AppLocalizations {
     Locale('zh'),
   ];
 
-  /// Main message shown on the home screen.
+  /// No description provided for @appMessage.
   ///
   /// In en, this message translates to:
   /// **'Welcome'**
   String get appMessage;
+
+  /// No description provided for @languageNameInSpanish.
+  ///
+  /// In en, this message translates to:
+  /// **'Inglés'**
+  String get languageNameInSpanish;
 }
 
 class _AppLocalizationsDelegate

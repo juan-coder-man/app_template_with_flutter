@@ -10,4 +10,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get appMessage => 'Willkommen';
+
+  @override
+  String get languageNameInSpanish => 'Alemán';
 }
