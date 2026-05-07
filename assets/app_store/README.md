@@ -100,6 +100,18 @@ El flujo recomendado es generar un **Archive** desde Xcode y distribuirlo desde 
 
 <span style="color:#16a34a">**(--- PARA TODAS LAS APPS ---)**</span>
 
+## 8. TestFlight (beta interna/externa)
+
+Usa **TestFlight** cuando necesitas distribuir builds para **QA** o **beta** antes de publicar (equipos internos o testers externos). Normalmente es requerido si quieres validar en dispositivos reales fuera de tu equipo antes de enviar a revisión de App Store.
+
+1. En App Store Connect → tu app → **TestFlight**:
+   - Crea **grupos de testers** (Internal / External) y asigna el build procesado.
+   - Completa la **Beta App Review information** (contacto y notas) si vas a usar testers externos.
+2. **Cifrado / encriptación (Export Compliance):**
+   - Al subir un build, Apple puede pedirte confirmar el uso de cifrado. Si tu app usa cifrado “común” (p. ej. **HTTPS/TLS**) igual debes responder el cuestionario.
+   - Si aplica exención, marca `ITSAppUsesNonExemptEncryption` según corresponda y mantén consistencia con lo declarado en App Store Connect.
+3. Considera que **testers externos** pueden requerir una **revisión beta** (separada del release), lo que añade tiempo al flujo.
+
 ## Resumen: pasos a revisar en cada nueva app
 
 Antes de publicar una **nueva app**, repasa siempre estos pasos (los marcados con <span style="color:#16a34a">**(--- PARA TODAS LAS APPS ---)**</span>):
