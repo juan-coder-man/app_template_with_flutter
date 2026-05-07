@@ -43,3 +43,7 @@ Esto actualiza los iconos en `android/` e `ios/`. Si publicas en App Store y el 
 ## Google Play
 
 Plantillas y referencias para ficha de tienda, política de privacidad, notas de versión y versionado: [assets/play_store/README.md](assets/play_store/README.md).
+
+## App Store (iOS)
+
+Pasos para publicar en App Store Connect (firma, build, subida y revisión): [assets/app_store/README.md](assets/app_store/README.md).
