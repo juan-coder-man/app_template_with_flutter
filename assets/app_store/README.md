@@ -2,6 +2,30 @@
 
 Esta carpeta agrupa referencias para publicar la aplicación Flutter en la App Store. Es una **guía operativa**; sustituye o amplía según tu caso y consulta siempre la [documentación oficial de Apple](https://developer.apple.com/app-store/submissions/) y la de Flutter sobre [compilación y publicación en iOS](https://docs.flutter.dev/deployment/ios).
 
+## Resumen: pasos a revisar en cada nueva app
+
+Antes de publicar una **nueva app**, repasa siempre estos pasos:
+
+| Paso | Sección                        | Qué revisar / actualizar                                                                |
+| ---- | ------------------------------ | --------------------------------------------------------------------------------------- |
+| 2    | App Store Connect              | Crear el registro de la app y el **Bundle ID** en Certificates, Identifiers & Profiles. |
+| 5    | Signing & Capabilities (Xcode) | **Team** correcto y **Bundle Identifier** coincidente con el de App Store Connect.      |
+| 6    | Build de producción            | Ejecutar `flutter build ipa` y aceptar permisos del Llavero.                            |
+| 7    | Subir a App Store Connect      | `Product > Archive` en Xcode → `Organizer` → `Distribute App` → `Upload`.               |
+
+> Adicionalmente, revisa el paso 1 cada cierto tiempo (`flutter doctor`, versión de Xcode y certificados vigentes).
+
+## Documentación de la ficha de tienda
+
+Plantillas y referencias de los campos que App Store Connect pide para enviar a revisión. Todo el contenido es **ejemplo** y debe sustituirse por textos revisados antes de publicar.
+
+| Documento                                                    | Uso                                                                                   |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| [README-store-listing.md](README-store-listing.md)           | Name, Subtitle, Promotional Text, Description, Keywords, URLs y Copyright por idioma. |
+| [README-graphics.md](README-graphics.md)                     | Icono 1024², capturas iPhone 6.5", iPad 13", Apple Watch y app previews.              |
+| [README-privacy-policy.md](README-privacy-policy.md)         | URL de Política de Privacidad obligatoria en App Privacy.                             |
+| [README-review-information.md](README-review-information.md) | App Review Information: contacto, login de prueba, notas y adjunto.                   |
+
 ## 1. Requisitos previos
 
 - Cuenta activa en el [Apple Developer Program](https://developer.apple.com/programs/) (cuota anual).
@@ -111,16 +135,3 @@ Usa **TestFlight** cuando necesitas distribuir builds para **QA** o **beta** ant
    - Al subir un build, Apple puede pedirte confirmar el uso de cifrado. Si tu app usa cifrado “común” (p. ej. **HTTPS/TLS**) igual debes responder el cuestionario.
    - Si aplica exención, marca `ITSAppUsesNonExemptEncryption` según corresponda y mantén consistencia con lo declarado en App Store Connect.
 3. Considera que **testers externos** pueden requerir una **revisión beta** (separada del release), lo que añade tiempo al flujo.
-
-## Resumen: pasos a revisar en cada nueva app
-
-Antes de publicar una **nueva app**, repasa siempre estos pasos (los marcados con <span style="color:#16a34a">**(--- PARA TODAS LAS APPS ---)**</span>):
-
-| Paso | Sección                        | Qué revisar / actualizar                                                                |
-| ---- | ------------------------------ | --------------------------------------------------------------------------------------- |
-| 2    | App Store Connect              | Crear el registro de la app y el **Bundle ID** en Certificates, Identifiers & Profiles. |
-| 5    | Signing & Capabilities (Xcode) | **Team** correcto y **Bundle Identifier** coincidente con el de App Store Connect.      |
-| 6    | Build de producción            | Ejecutar `flutter build ipa` y aceptar permisos del Llavero.                            |
-| 7    | Subir a App Store Connect      | `Product > Archive` en Xcode → `Organizer` → `Distribute App` → `Upload`.               |
-
-> Adicionalmente, revisa el paso 1 cada cierto tiempo (`flutter doctor`, versión de Xcode y certificados vigentes).
