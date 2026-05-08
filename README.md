@@ -2,6 +2,42 @@
 
 Plantilla base en Flutter para arrancar proyectos nuevos con dependencias mínimas, internacionalización lista y estructura de carpetas clara.
 
+## Flujo de desarrollo y producción
+
+Orden sugerido para pasar del concepto a la publicación:
+
+1. **Diseño visual y bocetos**  
+   Definir las pantallas completas con mockups o wireframes de alta fidelidad (por ejemplo con Gemini u otra IA de generación de imágenes), de modo que el flujo y el aspecto general queden cerrados antes de codificar.
+
+2. **Extracción de recursos**  
+   Del material de diseño, extraer gráficos e iconos relevantes para la app y ubicarlos en `assets/` (u otra convención del proyecto) para poder referenciarlos desde el código.
+
+3. **Ajuste de assets**  
+   Refinar tamaños, formatos y transparencias en herramientas como Inkscape o servicios como iloveimg, manteniendo nombres y carpetas estables para el pipeline de build.
+
+4. **Desarrollo incremental**  
+   Implementar por entregas pequeñas: pruebas continuas, funcionalidades mínimas viables, nuevas pantallas según avanza el diseño, y cuando haga falta nuevas extracciones de imagen y su posterior ajuste.
+
+5. **Modelo de negocio**  
+   La monetización y el alcance suelen definirse en paralelo al diseño de bocetos; cuando el desarrollo funcional esté completo, integrar el modelo de negocio en la app (suscripciones, compras in-app, anuncios, etc., según lo acordado).
+
+6. **Iteración**  
+   Tras integrar el modelo de negocio, revisar UX, estabilidad y cumplimiento; repetir ciclos cortos de desarrollo y prueba solo si es necesario.
+
+7. **Presencia en tiendas (gráficos)**  
+   Capturar pantallas reales de la app y, con ayuda de Gemini u otro modelo, generar o retocar las piezas de presencia (feature graphic, capturas promocionales, etc.); ajustarlas manualmente hasta cumplir las guías de cada tienda.
+
+8. **Textos legales y de ficha**  
+   Redactar política de privacidad, descripciones y demás textos obligatorios usando como guía los README de cada tienda en `assets/app_store/`, `assets/play_store/` y, si aplica, `assets/web_store/`.
+
+9. **Web de políticas**  
+   Publicar la política de privacidad (y enlaces relacionados) en la URL que declararás en las tiendas.
+
+10. **Firma, build y lanzamiento**  
+    Seguir el proceso de firma y generación de artefactos; publicar en las tiendas y, en paralelo o después, preparar el módulo o sección promocional en la web de la empresa.
+
+Referencias rápidas en esta plantilla: [Google Play](assets/play_store/README.md), [App Store](assets/app_store/README.md).
+
 ## Pasos realizados
 
 1. **Proyecto base** creado con `flutter create`.

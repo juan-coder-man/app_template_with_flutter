@@ -4,6 +4,7 @@ Plantillas multi-idioma de los campos localizables que App Store Connect pide en
 
 ## Límites por campo
 
+
 | Campo                                | Límite                     | Notas                                                                     |
 | ------------------------------------ | -------------------------- | ------------------------------------------------------------------------- |
 | Name (nombre)                        | **30** caracteres          | Aparece en la ficha y en la búsqueda.                                     |
@@ -15,6 +16,7 @@ Plantillas multi-idioma de los campos localizables que App Store Connect pide en
 | Marketing URL                        | URL pública                | Opcional.                                                                 |
 | Copyright                            | `YYYY Nombre o Entidad`    | Obligatorio. Sin URLs.                                                    |
 | Version                              | Formato `X.Y.Z`            | Debe coincidir con `CFBundleShortVersionString` del build subido.         |
+
 
 ## Idiomas a localizar
 
@@ -31,70 +33,6 @@ Los listados aquí coinciden con los disponibles en App Store Connect (las clave
 - `es-MX` Español (México)
 
 Los textos marcados como `[EJEMPLO]` / `EXAMPLE` / `【例】` / `[ПРИМЕР]` / `【示例】` son **solo plantilla**.
-
----
-
-## Valores globales de referencia (un solo idioma de trabajo)
-
-Esqueleto previo a localizar. No se pega directamente en la consola; sirve para preparar las traducciones.
-
-**Name (máx. 30 caracteres)**
-
-```
-EJEMPLO: App plantilla
-```
-
-**Subtitle (máx. 30 caracteres)**
-
-```
-[EJEMPLO] Subtítulo de demo
-```
-
-**Promotional Text (máx. 170 caracteres)**
-
-```
-[EJEMPLO] Texto promocional de muestra. Sustituir por novedades reales antes de publicar la versión.
-```
-
-**Description (máx. 4000 caracteres)**
-
-```
-[EJEMPLO] Descripción extendida de demostración.
-
-Este párrafo forma parte de una plantilla para la ficha de App Store. Debe describir funciones reales, datos tratados y cualquier información que Apple exija para tu categoría.
-
-Sustituir todo el contenido por texto definitivo revisado antes del envío a revisión.
-```
-
-**Keywords (máx. 100 caracteres totales, separados por coma)**
-
-```
-ejemplo,plantilla,demo,app,prueba
-```
-
-**Support URL**
-
-```
-https://example.com/soporte
-```
-
-**Marketing URL**
-
-```
-https://example.com
-```
-
-**Copyright**
-
-```
-2026 App Template
-```
-
-**Version**
-
-```
-1.0.0
-```
 
 ---
 
@@ -635,3 +573,4 @@ https://example.com/es
 ```
 1.0.0
 ```
+

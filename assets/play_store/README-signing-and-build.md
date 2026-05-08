@@ -150,6 +150,7 @@ keytool -genkeypair -v \
 
 Checklist DN (plantilla):
 
+
 | Campo                    | Valor |
 | ------------------------ | ----- |
 | CN (nombre y apellidos)  |       |
@@ -158,6 +159,7 @@ Checklist DN (plantilla):
 | L (ciudad)               |       |
 | ST (provincia/estado)    |       |
 | C (país, 2 letras)       |       |
+
 
 `keyAlias` debe coincidir con el valor definido en `android/key.properties` (por defecto, `upload`).
 
@@ -248,9 +250,12 @@ Si falta el `.jks` o `android/key.properties` está incompleto, el release puede
 
 ## Referencias rápidas
 
+
 | Elemento                 | Ubicación                         |
 | ------------------------ | --------------------------------- |
 | Propiedades de firma     | `android/key.properties`          |
 | Configuración Gradle app | `android/app/build.gradle.kts`    |
 | Keystore (no versionar)  | `credentials/upload-keystore.jks` |
 | Índice de documentación  | [README.md](README.md)            |
+
+

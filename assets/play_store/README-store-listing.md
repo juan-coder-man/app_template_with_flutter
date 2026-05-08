@@ -14,36 +14,6 @@ Los textos marcados como `[EJEMPLO]` / `EXAMPLE` / `示例` son **solo plantilla
 
 ---
 
-## Valores globales de referencia (un solo idioma de trabajo)
-
-Úsalos como esqueleto antes de trasladar a cada localización.
-
-**Nombre (máx. 30 caracteres)**
-
-```
-EJEMPLO: App plantilla
-```
-
-**Descripción breve (máx. 80 caracteres)**
-
-```
-[EJEMPLO] Texto corto para la tienda; sustituir antes de publicar en Play.
-```
-
-**Descripción completa (máx. 4000 caracteres)**
-
-El fragmento siguiente es **demostración acortada**; la descripción completa real puede ocupar hasta 4000 caracteres.
-
-```
-[EJEMPLO] Descripción extendida de demostración.
-
-Este párrafo forma parte de una plantilla para la ficha de Google Play. Debe describir funciones reales, permisos relevantes y cualquier información que Google exija para tu categoría.
-
-Sustituir todo el contenido por texto definitivo revisado antes del envío a revisión.
-```
-
----
-
 ### Deutsch (alemán)
 
 **Nombre (máx. 30 caracteres)**

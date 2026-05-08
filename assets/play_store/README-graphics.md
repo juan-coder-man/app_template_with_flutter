@@ -1,110 +1,148 @@
 # Activos gráficos para la ficha en Google Play
 
-Referencias de tamaños, formatos y cantidades según la ayuda oficial de Play Console. Los requisitos pueden cambiar; confirma siempre en **Grow users → Store presence → Main store listing → Graphics**.
+Referencias según los textos que muestra Play Console en **Grow users → Store presence → Main store listing → Graphics**. Revisa antes de subir materiales las [directrices de contenido](https://support.google.com/googleplay/android-developer/answer/9900383) del programa. Si añades traducciones de la ficha sin gráficos localizados, Play usará los del idioma predeterminado.
 
 Documentación oficial: [Add preview assets to showcase your app](https://support.google.com/googleplay/android-developer/answer/9866151).
 
 ---
 
-## Mínimo obligatorio (ficha típica solo teléfono)
+## Icono de la aplicación _(obligatorio)_
 
-Para publicar la ficha de tienda necesitas al menos **icono de la app**, **gráfico destacado** y **dos capturas** (reglas generales de capturas abajo). Hasta **8 capturas** por tipo de dispositivo.
+| Requisito    | Valor                                                                                                                                                                                                                                                                             |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dimensiones  | **512 × 512** px                                                                                                                                                                                                                                                                  |
+| Formato      | **PNG** o **JPEG**                                                                                                                                                                                                                                                                |
+| Tamaño       | Como máximo **1 MB** (1024 KB)                                                                                                                                                                                                                                                    |
+| Cumplimiento | [Especificaciones de diseño del icono](https://developer.android.com/google-play/resources/icon-design-specifications) y [política de metadatos](https://support.google.com/googleplay/android-developer/answer/9898842). La consola permite previsualización del recurso subido. |
 
-| Activo              | Dimensiones         | Formato                                  | Notas                                                                                                                                           |
-| ------------------- | ------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Icono (Play Store)  | **512 × 512** px    | PNG **32 bits** (con alpha)              | Máx. **1024 KB**. Debe cumplir las [especificaciones de icono](https://developer.android.com/google-play/resources/icon-design-specifications). |
-| Gráfico destacado   | **1024 × 500** px   | JPEG o PNG **24 bits** (sin alpha)       | Se usa como portada; si hay vídeo de vista previa, actúa de fondo del reproductor.                                                              |
-| Capturas (teléfono) | Ver tabla siguiente | JPEG o PNG (según políticas de capturas) | Mínimo **2** capturas en conjunto para la ficha; máx. **8** por tipo de dispositivo.                                                            |
+---
 
-### Reglas generales de capturas de pantalla (teléfono y resto de tipos salvo donde se indique lo contrario)
+## Gráfico de funciones / gráfico destacado _(obligatorio)_
 
-| Requisito       | Valor                                                                 |
-| --------------- | --------------------------------------------------------------------- |
-| Cantidad mínima | **2** capturas (en conjunto entre los tipos de dispositivo que uses). |
-| Lado máximo     | **3840 px** en la dimensión mayor.                                    |
-| Proporción      | La dimensión **mayor no puede ser más del doble** que la **menor**.   |
-| Contenido       | Debe reflejar la experiencia real dentro de la app o el juego.        |
+En la interfaz española aparece como **«Gráfico de funciones»**; equivale al _feature graphic_ de la ayuda en inglés.
+
+| Requisito    | Valor                                                                                            |
+| ------------ | ------------------------------------------------------------------------------------------------ |
+| Dimensiones  | **1024 × 500** px                                                                                |
+| Formato      | **PNG** o **JPEG**                                                                               |
+| Tamaño       | Como máximo **15 MB**                                                                            |
+| Uso habitual | Cabecera de la ficha; si hay vídeo de vista previa, suele utilizarse como fondo del reproductor. |
+
+---
+
+## Vídeo
+
+Campo habitual de la misma página de **Graphics**.
+
+| Requisito     | Condición                                                                                          |
+| ------------- | -------------------------------------------------------------------------------------------------- |
+| URL           | Vídeo de **YouTube** (pública o **solo con enlace**/no listada según permite la política vigente). |
+| Anuncios      | **Desactivados** en el vídeo.                                                                      |
+| Restricciones | **Sin** restricción de edad que impida mostrarlo en Play tal como indica la consola.               |
+
+video:
+
+```
+https://www.youtube.com/watch?v=
+```
+
+---
+
+## Capturas por tipo de dispositivo
+
+Los límites son los que muestra cada bloque en **Graphics**. Donde aplique **16:9 / 9:16** son **horizontal** u **vertical** respectivamente.
+
+### Teléfono _(obligatorio)_
+
+| Requisito            | Valor                                 |
+| -------------------- | ------------------------------------- |
+| Cantidad             | Entre **2** y **8** capturas          |
+| Formato              | **PNG** o **JPEG**                    |
+| Tamaño por archivo   | Como máximo **8 MB**                  |
+| Relación de aspecto  | **16:9** o **9:16**                   |
+| Lados (ancho / alto) | Cada lado entre **320** y **3840** px |
+
+### Tablet 7" _(obligatorio)_
+
+| Requisito           | Valor                                          |
+| ------------------- | ---------------------------------------------- |
+| Cantidad            | Hasta **8** capturas (según bloque en consola) |
+| Formato             | **PNG** o **JPEG**                             |
+| Tamaño por archivo  | Como máximo **8 MB**                           |
+| Relación de aspecto | **16:9** o **9:16**                            |
+| Lados               | Cada lado entre **320** y **3840** px          |
+
+### Tablet 10" _(obligatorio)_
+
+| Requisito           | Valor                                  |
+| ------------------- | -------------------------------------- |
+| Cantidad            | Hasta **8** capturas                   |
+| Formato             | **PNG** o **JPEG**                     |
+| Tamaño por archivo  | Como máximo **8 MB**                   |
+| Relación de aspecto | **16:9** o **9:16**                    |
+| Lados               | Cada lado entre **1080** y **7680** px |
+
+### Chromebook
+
+| Requisito           | Valor                                  |
+| ------------------- | -------------------------------------- |
+| Cantidad            | Entre **4** y **8** capturas           |
+| Formato             | **PNG** o **JPEG**                     |
+| Tamaño por archivo  | Como máximo **8 MB**                   |
+| Relación de aspecto | **16:9** o **9:16**                    |
+| Lados               | Cada lado entre **1080** y **7680** px |
+
+### Android XR
+
+| Requisito           | Valor                                 |
+| ------------------- | ------------------------------------- |
+| Cantidad            | Entre **4** y **8**                   |
+| Formato             | **PNG** o **JPEG**                    |
+| Tamaño por archivo  | Como máximo **15 MB**                 |
+| Relación de aspecto | **16:9** o **9:16**                   |
+| Lados               | Cada lado entre **720** y **7680** px |
+
+**Vídeo de XR espacial**: URL de **YouTube**; formato inmersivo **360°, 180° o 3D**; público o no listado; **sin anuncios** y **sin** restricción de edad que impida la reproducción en Play según indicación en consola.
+
+```
+https://www.youtube.com/watch?v=
+```
+
+**Vídeo de XR no espacial**: URL de **YouTube**; público o no listado; **sin anuncios** y **sin** restricción de edad según consola.
+
+```
+https://www.youtube.com/watch?v=
+```
 
 ---
 
 ## Muy recomendado (promoción y superficies de recomendación)
 
-Cumplir lo siguiente **no** es obligatorio para tener ficha publicada, pero Google lo exige para ser elegible en formatos que usan capturas en recomendaciones y promoción.
+Cumplir lo siguiente **no** sustituye los mínimos de la tabla de **Teléfono** arriba, pero Google lo usa para elegibilidad en recomendaciones y promoción.
 
-| Contexto   | Capturas       | Orientación y mínimos sugeridos                                                                                                                          |
-| ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Apps**   | Al menos **4** | Lado corto mín. **1080 px**. **16:9** horizontal mín. **1920 × 1080** px, o **9:16** vertical mín. **1080 × 1920** px.                                   |
-| **Juegos** | Al menos **3** | Tres capturas **16:9** horizontal (mín. **1920 × 1080** px) **o** tres **9:16** verticales (mín. **1080 × 1920** px), mostrando la experiencia de juego. |
-
-| Activo opcional           | Descripción                                                                                                                                                                                                                                                                  |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Vídeo de vista previa** | URL de un vídeo en **YouTube** (no lista ni canal). No obligatorio en general; **muy recomendado** para juegos; en algunas zonas de Play los juegos pueden necesitarlo para aparecer. Anuncios del vídeo desactivados; sin restricción de edad que impida mostrarlo en Play. |
+| Contexto   | Capturas       | Orientación y mínimos sugeridos                                                                                        |
+| ---------- | -------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Apps**   | Al menos **4** | Lado corto mín. **1080** px. **16:9** horizontal mín. **1920 × 1080** px, o **9:16** vertical mín. **1080 × 1920** px. |
+| **Juegos** | Al menos **3** | Tres capturas **16:9** (mín. **1920 × 1080** px) **o** tres **9:16** (mín. **1080 × 1920** px).                        |
 
 ---
 
-## Obligatorio solo si publicas en estas plataformas
+## Resumen rápido: qué subir según tu caso
 
-### Tablet y Chromebook (pantallas grandes)
-
-Si añades capturas para **Chromebook** o **tablet**:
-
-| Requisito           | Valor                                       |
-| ------------------- | ------------------------------------------- |
-| Cantidad mínima     | **4** capturas                              |
-| Tamaño (lado)       | Entre **1080** y **7680** px                |
-| Relación de aspecto | **16:9** (horizontal) o **9:16** (vertical) |
-
-### Wear OS
-
-Si distribuyes en **Wear OS**:
-
-| Requisito     | Valor                                                                                                                                                                                    |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Capturas      | Al menos **1** que refleje la versión actual en Wear OS                                                                                                                                  |
-| Relación      | **1:1**                                                                                                                                                                                  |
-| Tamaño mínimo | **384 × 384** px                                                                                                                                                                         |
-| Restricciones | Sin marcos de dispositivo; solo interfaz de la app; sin fondos ni texto gráfico añadido que no sea parte de la UI; sin fondos transparentes ni enmascarado donde la política lo prohíba. |
-
-### Android TV
-
-Si distribuyes app para **Android TV**:
-
-| Activo      | Dimensiones                  | Formato                            | Notas                                                                     |
-| ----------- | ---------------------------- | ---------------------------------- | ------------------------------------------------------------------------- |
-| Capturas TV | Según sección TV en la ayuda | —                                  | Al menos **1** captura de TV antes de publicar en ese canal.              |
-| Banner TV   | **1280 × 720** px            | JPEG o PNG **24 bits** (sin alpha) | Obligatorio para apps habilitadas para Android TV; solo se muestra en TV. |
-
-### Android Automotive OS
-
-Las reglas dependen de la [categoría de la app](https://developer.android.com/training/cars#supported-app-categories): en categorías “parked” las capturas pueden ser opcionales; fuera de ellas suelen ser obligatorias.
-
-Si **incluyes** capturas específicas de Automotive OS, la ayuda exige al menos **2 verticales** (**800 × 1280** px) y **2 horizontales** (**1024 × 768** px).
-
-### Android XR
-
-| Requisito           | Valor                                                     |
-| ------------------- | --------------------------------------------------------- |
-| Cantidad            | Entre **4** y **8** capturas                              |
-| Relación de aspecto | **8:5**                                                   |
-| Formato             | PNG o JPEG, hasta **8 MB** por imagen                     |
-| Resolución          | Recomendado **3840 × 2400** px; mínimo **1920 × 1200** px |
-
----
-
-## Resumen rápido: opcional vs obligatorio
-
-| Situación                                           | Qué subir como mínimo gráfico                                                    |
-| --------------------------------------------------- | -------------------------------------------------------------------------------- |
-| Solo teléfono                                       | Icono 512², gráfico 1024×500, **2+** capturas teléfono (hasta 8).                |
-| Quieres mejor visibilidad en recomendaciones (apps) | **4** capturas con mínimos 1080 px / 16:9 o 9:16 indicados arriba.               |
-| Quieres mejor visibilidad (juegos)                  | **3** capturas 16:9 o **3** en 9:16 con mínimos indicados.                       |
-| Tablets / Chromebook                                | Si añades bloque de capturas grandes: **4** capturas, 1080–7680 px, 16:9 o 9:16. |
-| Wear OS / TV / Automotive / XR                      | Aplica la tabla condicional correspondiente.                                     |
+| Situación                          | Mínimo gráfico alineado con consola (teléfono típico)                                                 |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Solo teléfono                      | Icono **512²** (≤1 MB, PNG/JPEG), gráfico **1024×500** (≤15 MB, PNG/JPEG), **2–8** capturas teléfono. |
+| Promoción / recomendaciones (apps) | **4** capturas con mínimos 1080 px / 16:9 o 9:16 de la tabla «Muy recomendado».                       |
+| Promoción (juegos)                 | **3** capturas 16:9 o **3** en 9:16 con mínimos de la misma tabla.                                    |
+| Tablet 7"                          | Hasta **8** capturas; lados **320–3840** px; 16:9 o 9:16; ≤8 MB.                                      |
+| Tablet 10"                         | Hasta **8** capturas; lados **1080–7680** px; 16:9 o 9:16; ≤8 MB.                                     |
+| Chromebook                         | **4–8** capturas; lados **1080–7680** px; 16:9 o 9:16; ≤8 MB.                                         |
+| XR                                 | Aplica la sección condicional correspondiente.                                                        |
 
 ---
 
 ## Buenas prácticas breves
 
-- Añade **texto alternativo (alt)** a cada imagen (Google sugiere hasta **140 caracteres**, sin empezar por “foto de…” o “imagen de…”).
-- Las capturas deben mostrar la **experiencia real** de la app; evita reclamaciones de ranking, precio o descargas, y CTAs tipo “instala ya” según la [política de metadatos](https://support.google.com/googleplay/android-developer/answer/9898842).
-- **Gráfico destacado:** evita duplicar el mismo protagonismo visual del icono; ten en cuenta zonas de recorte que la interfaz de Play puede aplicar.
+- Añade **texto alternativo (alt)** a cada imagen (Google sugiere hasta **140 caracteres**, sin empezar por «foto de…» o «imagen de…»).
+- Las capturas deben mostrar la **experiencia real** de la app; evita reclamaciones de ranking, precio o descargas, y CTAs tipo «instala ya» según la [política de metadatos](https://support.google.com/googleplay/android-developer/answer/9898842).
+- **Gráfico de funciones:** evita duplicar el mismo protagonismo visual del icono; ten en cuenta zonas de recorte que la interfaz de Play puede aplicar.

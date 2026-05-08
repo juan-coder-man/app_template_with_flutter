@@ -1,70 +1,107 @@
 # Activos gráficos para la ficha en App Store
 
-Referencias de tamaños, formatos y cantidades para los activos que App Store Connect pide en **App Store → App Previews and Screenshots** y en **App Information → App Icon**. Los requisitos pueden cambiar; confirma siempre en la ayuda oficial.
+Referencias según los textos y campos que muestra **App Store Connect** en **App Store → Previews and Screenshots** (pestañas iPhone, iPad y Apple Watch) y en **App Information** para el icono. Los requisitos pueden cambiar; confirma siempre en la ayuda oficial.
 
 Documentación oficial: [Screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/screenshot-specifications/) · [App preview specifications](https://developer.apple.com/help/app-store-connect/reference/app-preview-specifications/) · [App icon](https://developer.apple.com/design/human-interface-guidelines/app-icons).
 
 ---
 
-## Mínimo obligatorio
+## Icono para App Store _(obligatorio)_
 
-Para enviar a revisión necesitas, al menos:
+Se configura en **App Information** / asset del icono de marketing (y el binario incluye el icono de la app vía `Assets.xcassets/AppIcon.appiconset` en Xcode).
 
-- **Icono de la app** en el binario (incluido vía `Assets.xcassets/AppIcon.appiconset` en Xcode).
-- **Capturas de iPhone 6.5"** (cubre la familia de iPhone más común).
-- **Capturas de iPad 13"** (obligatoria si la app es universal o se distribuye en iPad; según la captura adjunta de la consola, es lo que App Store Connect está pidiendo).
-
-| Activo               | Dimensiones admitidas                                          | Formato       | Notas                                                  |
-| -------------------- | -------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
-| Icono App Store      | **1024 × 1024** px                                             | PNG sin alpha | Sin transparencia ni esquinas redondeadas; sRGB o P3.  |
-| Capturas iPhone 6.5" | `1242 × 2688`, `2688 × 1242`, `1284 × 2778` o `2778 × 1284` px | JPEG o PNG    | Hasta **10** capturas + **3** app previews por idioma. |
-| Capturas iPad 13"    | `2064 × 2752`, `2752 × 2064`, `2048 × 2732` o `2732 × 2048` px | JPEG o PNG    | Hasta **10** capturas + **3** app previews por idioma. |
-
-> Apple permite reutilizar las capturas de iPhone 6.5" para los demás tamaños de iPhone más pequeños; lo mismo aplica entre tamaños de iPad. Si subes solo el tamaño “mayor” obligatorio, el resto se hereda automáticamente.
+| Requisito     | Valor                                                                                          |
+| ------------- | ---------------------------------------------------------------------------------------------- |
+| Dimensiones   | **1024 × 1024** px                                                                             |
+| Formato       | **PNG** sin canal alpha                                                                        |
+| Aspecto       | Sin transparencia ni esquinas redondeadas en el archivo; Apple aplica la máscara en la tienda. |
+| Espacio color | **sRGB** o **Display P3**                                                                      |
 
 ---
 
-## Opcional
+## Capturas por tipo de dispositivo
 
-| Activo                      | Dimensiones admitidas                                                               | Formato                       | Notas                                                                                                    |
-| --------------------------- | ----------------------------------------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Capturas Apple Watch        | `410 × 502`, `416 × 496`, `396 × 484`, `368 × 448` o `312 × 390` px (según familia) | JPEG o PNG                    | Solo si distribuyes app de Watch.                                                                        |
-| App Preview (vídeo)         | Mismas resoluciones que las capturas del dispositivo correspondiente                | MOV, M4V o MP4 (H.264 / HEVC) | Hasta **3** vídeos por dispositivo y por idioma; duración **15–30 s**.                                   |
-| Capturas iPhone 6.7" / 6.9" | Resoluciones específicas según familia                                              | JPEG o PNG                    | Recomendado para mostrar correctamente en los modelos más recientes; si se omite, Apple usa las de 6.5". |
-| Capturas iPad 11"           | `1668 × 2388` o `2388 × 1668` px                                                    | JPEG o PNG                    | Si se omite, Apple usa las de iPad 13".                                                                  |
+En **Previews and Screenshots** cada pestaña (**iPhone**, **iPad**, **Apple Watch**) tiene sus dimensiones y contadores propios. Orientación: **vertical u horizontal** según los pares ancho × alto indicados.
 
----
+### iPhone 6.5" Display _(obligatorio para poder enviar a revisión en la mayoría de fichas iPhone)_
 
-## Reglas generales
+Si falta, App Store Connect puede impedir **Add for Review** con un mensaje del tipo: «You must upload a screenshot for **6.5-inch iPhone displays**.»
 
-| Requisito                | Valor                                                                                             |
-| ------------------------ | ------------------------------------------------------------------------------------------------- |
-| Cantidad mínima          | **1** captura por familia obligatoria; recomendado **3–5** para una ficha presentable.            |
-| Cantidad máxima          | **10** capturas + **3** app previews por familia y por idioma.                                    |
-| Espacio de color         | sRGB o Display P3.                                                                                |
-| Profundidad de color     | 24 bits (sin canal alpha en el icono; las capturas pueden tener alpha pero no se recomienda).     |
-| Contenido                | Debe reflejar la experiencia real dentro de la app.                                               |
-| Prohibido                | Precios, rankings, claims tipo “#1”, “Top App” o llamadas a instalar. No marcos de terceros.      |
-| Texto sobre las capturas | Permitido si forma parte del marketing de la propia app y no contradice las normas de App Review. |
+| Requisito           | Valor                                                                                                  |
+| ------------------- | ------------------------------------------------------------------------------------------------------ |
+| Cantidad capturas   | Hasta **10** por idioma/localización                                                                   |
+| Cantidad previews   | Hasta **3**                                                                                            |
+| Formato             | **JPEG** o **PNG**                                                                                     |
+| Dimensiones válidas | **1242 × 2688** · **2688 × 1242** · **1284 × 2778** · **2778 × 1284** px (retrato o paisaje según par) |
 
 ---
 
-## Resumen rápido
+### iPad 12.9" / 13" Display _(obligatorio si tu app debe mostrar capturas de iPad; suele exigirse para universal o presencia en iPad)_
 
-| Situación                                           | Qué subir como mínimo gráfico                                                                              |
-| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| App solo iPhone                                     | Icono 1024², al menos **1** captura iPhone 6.5" (recomendado 3–5).                                         |
-| App universal (iPhone + iPad)                       | Icono 1024², capturas iPhone 6.5" y capturas iPad 13".                                                     |
-| Quieres mostrar mejor experiencia en modelos nuevos | Añadir capturas iPhone 6.7"/6.9" e iPad 11" además de las obligatorias.                                    |
-| Distribuyes app de Apple Watch                      | Añadir capturas Watch en al menos un tamaño de la familia.                                                 |
-| Vas a usar app previews                             | Hasta **3** vídeos por dispositivo y por idioma, **15–30 s**, mismo tamaño que la captura correspondiente. |
+Si falta, App Store Connect puede impedir **Add for Review** con: «You must upload a screenshot for **13-inch iPad displays**.»
+
+| Requisito           | Valor                                                                                                                                        |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cantidad capturas   | Hasta **10**                                                                                                                                 |
+| Cantidad previews   | Hasta **3**                                                                                                                                  |
+| Formato             | **JPEG** o **PNG**                                                                                                                           |
+| Dimensiones válidas | **2064 × 2752** · **2752 × 2064** · **2048 × 2732** · **2732 × 2048** px (retrato o paisaje según par; la consola etiqueta retrato/paisaje). |
+
+---
+
+### Apple Watch _(solo si publicas app de watchOS)_
+
+| Modelo / familia | Dimensiones admitidas (px)    |
+| ---------------- | ----------------------------- |
+| Ultra 3          | **422 × 514** u **410 × 502** |
+| Series 11        | **416 × 496**                 |
+| Series 9         | **396 × 484**                 |
+| Series 6         | **368 × 448**                 |
+| Series 3         | **312 × 390**                 |
+
+| Requisito         | Valor                                         |
+| ----------------- | --------------------------------------------- |
+| Cantidad capturas | Hasta **10** en total para estos dispositivos |
+| Formato           | **JPEG** o **PNG**                            |
+
+---
+
+## Envío a revisión: requisitos gráficos mínimos
+
+Cuando faltan capturas obligatorias, la consola muestra un aviso tipo **Unable to Add for Review** y lista, entre otros, que debes subir captura para **13-inch iPad displays** y para **6.5-inch iPhone displays** cuando correspondan a tu producto.
+
+---
+
+## Reglas generales (capturas e icono)
+
+| Requisito        | Valor                                                                                           |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| Cantidad mínima  | Al menos **1** captura por familia obligatoria; recomendado **3–5** para una ficha clara.       |
+| Cantidad máxima  | **10** capturas + **3** app previews por familia de dispositivo y localización (según pestaña). |
+| Espacio de color | **sRGB** o **Display P3**.                                                                      |
+| Icono App Store  | Sin alpha; las capturas pueden llevar alpha pero no suele recomendarse.                         |
+| Contenido        | Debe reflejar la experiencia real en la app.                                                    |
+| Prohibido        | Precios, rankings, «#1», llamadas a instalar; marcos de terceros según App Review.              |
+
+Apple permite heredar capturas del tamaño «principal» a tamaños menores del mismo tipo de dispositivo cuando la consola lo ofrezca; revisa **Media Manager** para el mapeo exacto.
+
+---
+
+## Resumen rápido: qué subir según tu caso
+
+| Situación                        | Mínimo gráfico alineado con consola                                                                                            |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Solo iPhone                      | Icono **1024²** (PNG sin alpha); al menos **1** captura **iPhone 6.5"** en un tamaño válido de la tabla (recomendado **3–5**). |
+| iPhone + iPad (universal / iPad) | Lo anterior **más** al menos **1** captura **iPad 13"** / 12.9" en un tamaño válido de la tabla.                               |
+| Apple Watch                      | Hasta **10** capturas en al menos un tamaño de modelo listado arriba.                                                          |
+| App Previews                     | Hasta **3** vídeos por pestaña de dispositivo; misma resolución que las capturas de ese slot; **15–30 s**.                     |
 
 ---
 
 ## Buenas prácticas breves
 
-- Sube primero las capturas en el **idioma primario** (`en-US`); App Store Connect las usará como fallback en el resto si no localizas.
-- Mantén el **mismo orden** entre idiomas (la primera captura es la que se ve en resultados de búsqueda).
-- No incluyas **información sensible** ni datos personales en las capturas.
-- Para apps universales, asegúrate de que las capturas de iPad **no** sean simples reescalados de iPhone: la consola las puede rechazar.
-- Verifica antes de subir que las imágenes están en **sRGB** y sin perfil ICC raro; muchos rechazos automáticos vienen de espacios de color no soportados.
+- Sube primero material en el **idioma primario** de la ficha; el resto puede heredar hasta que localices.
+- Mantén el **mismo orden** de capturas entre idiomas (la primera es la más visible en resultados).
+- No incluyas **datos personales** ni información sensible en las capturas.
+- En apps **universal**, evita que las capturas de iPad sean solo un reescalado de iPhone si la experiencia difiere.
+- Exporta en **sRGB** y perfil ICC estándar para reducir rechazos automáticos por color.

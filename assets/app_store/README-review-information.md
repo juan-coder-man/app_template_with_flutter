@@ -23,16 +23,16 @@ Sección **Información de revisión de la aplicación** en App Store Connect (*
 ### Sign-in required
 
 ```
-☑ Se requiere iniciar sesión
+Si/No Se requiere iniciar sesión
 ```
 
-### User name
+#### - User name
 
 ```
 demo@example.com
 ```
 
-### Password
+#### - Password
 
 ```
 DemoPassword123!
